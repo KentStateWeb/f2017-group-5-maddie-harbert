@@ -1,19 +1,328 @@
-body {
-  max-width: 1000px;
-  padding: 1em;
-  font-family: Helvetica, Arial, sans-serif;
+/* Global Styles */
+svg {
+  fill: #1C1723;
+  max-width: 60%;
+  display: block;
+  margin: auto;
+  padding-top: 7em;
+  padding-bottom: 3em;
+  stroke: #1C1723;
+  stroke-width: 2px;
 }
 
-div, section, main, aside, header, footer {
-  border: 1px solid lightgray;
-  padding: .5em;
-  margin-bottom: 1em;
+body {
+  max-width: 100%;
+  padding: 0;
+  border: 0;
+  margin: 0;
 }
 
 img {
   max-width: 100%;
 }
 
-* {
-  box-sizing: border-box;
+nav a:visited, a:active, a:link {
+  text-decoration: none;
+  color: white;
 }
+
+.main-nav {
+  display: -webkit-flex;
+  display: flex;
+  min-width: 100%;
+}
+
+.main-nav li {
+  display: inline-block;
+  list-style-type: none;
+  padding-right: 3em;
+}
+
+.main-nav li:first-child {
+  margin-right: auto;
+}
+
+.main-nav a {
+  display: block;
+}
+
+.sunflowerlogo {
+  width: 60px;
+  height: auto;
+}
+
+nav {
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 10px;
+  background-color: #1C1723;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  font-size: 1em;
+}
+
+nav li {
+  padding: .5em;
+}
+
+main {
+  padding: 6em;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  color: black;
+  border: 4px solid black;
+  padding: .5em;
+  margin-top: 1em;
+  font-family: Montserrat, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 0px;
+  font-size: 1em;
+  transition-duration: 0.2s;
+  letter-spacing: 1px;
+}
+
+h1{
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  font-size: 2.5em;
+}
+
+h2{
+  font-family: Lora, Georgia, serif;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+p, li, a, td {
+  font-family: Lora, Georgia, serif;
+  line-height: 1.5;
+}
+
+ul, li {
+  list-style: none;
+}
+
+/* Start Footer*/
+footer {
+  display: flex;
+  background-color: #1C1723;
+  padding: 3em;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  margin: 0;
+  font-size: 1.25em;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.social {
+  padding: 1em 1em;
+}
+
+footer a:visited, a:active, a:link {
+  text-decoration: none;
+  color: white;
+}
+/* End footer*/
+
+/*Start Home Page*/
+/* Home Spacing*/
+.home-feature {
+  padding-top: 5em;
+  text-align: center;
+}
+
+.home-feature-headline {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+
+.latest-news {
+  padding-top: 5em;
+}
+
+.home-tour {
+  padding-top: 5em;
+}
+
+.newsletter {
+  padding-top: 5em;
+}
+/* Home Header*/
+
+#headervideo {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+/* Home Video iframe*/
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 35px;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* End Home Video I Frame*/
+
+/* Start Home News Section*/
+
+.container {
+    max-width:100%;
+    height: auto;
+    position: relative;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+    margin-top: 1em;
+	}
+
+.image1 {
+		position: relative;
+	}
+
+.newstext{
+	position: absolute;
+	top: 0%; left: 0; right: 0; bottom: 0;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	background-color: rgba(0,0,0,0.8);
+	opacity: 0;
+	-webkit-transition: opacity 0.6s;
+	-moz-transition: opacity 0.6s;
+	transition: opacity 0.6s;
+  line-height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+	}
+
+  .newstext:hover{
+	    opacity: 1;
+	}
+
+	.newstext a{
+	  color: white;
+    text-size: .5em;
+    text-decoration: none;
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+	}
+/* End Home News Section*/
+
+/*Home Tour Dates*/
+
+table {
+  padding-bottom: 2em;
+  font-family: Lora, Georgia, serif;
+}
+
+td {
+  padding: .5em;
+}
+
+/* Start Home Newsletter Form*/
+form {
+  font-family: Montserrat, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.emailform {
+  border: 4px solid black;
+  background: #fff;
+  width: 50%;
+  height: 30px;
+  padding: .5em;
+  margin-top: 1em;
+  font-family: Montserrat, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.subscribebutton {
+  border: 4px solid black;
+  width: 25%;
+  height: 50px;
+  padding: .5em;
+  margin-top: 1em;
+  font-family: Montserrat, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 0px;
+  font-size: 1em;
+  transition-duration: 0.2s;
+  letter-spacing: 1px;
+}
+
+.subscribebutton:hover {
+  background-color: black;
+  color: white;
+}
+/* End Home Newsletter Form*/
+/*End Home Page*/
+
+/*Start About Page*/
+.bandbio {
+  max-width: 60%;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 5em;
+}
+
+.bios {
+  max-width: 100%;
+  display: flex;
+
+}
+.juliabio, .nickbio, .jacobbio {
+  margin: 0 auto;
+  max-height: 100%;
+  text-align: center;
+  line-height: 2.5em;
+  padding: 2em;
+}
+/*End About Page*/
+
+/*Start News Page*/
+
+.news-entry {
+  padding-top: 3em;
+}
+
+.news-body {
+  padding-bottom: 2em;
+}
+
+/*Global Button Transition*/
+.button:hover {
+  background-color: black;
+  color: white;
