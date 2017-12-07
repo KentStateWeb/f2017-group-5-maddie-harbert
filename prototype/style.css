@@ -295,7 +295,9 @@ footer a:visited, a:active, a:link {
 /* End Home Video I Frame*/
 
 /* Start Home News Section*/
-
+.news-container {
+  display: flex;
+}
 
 .container {
     max-width:100%;
@@ -307,8 +309,10 @@ footer a:visited, a:active, a:link {
     margin-top: 1em;
 	}
 
-.image1, .image2, .image3 {
+.image1 {
 		position: relative;
+    height: auto;
+    width: auto;
 	}
 
 .newstext{
@@ -433,6 +437,8 @@ form {
 /*End About Page*/
 
 /*Start News Page*/
+
+
 
 .news-entry {
   padding-bottom: 6em;
