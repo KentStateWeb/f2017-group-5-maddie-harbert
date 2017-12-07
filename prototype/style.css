@@ -5,7 +5,6 @@ svg {
   display: block;
   margin: auto;
   padding-top: 10em;
-  padding-bottom: 1em;
   stroke: #1C1723;
   stroke-width: 2px;
 }
@@ -28,6 +27,7 @@ img {
   background-color: #1C1723;
   position: absolute;
   width: 100%;
+  z-index: 3;
 }
 
 .header ul {
@@ -237,6 +237,12 @@ footer a:visited, a:active, a:link {
 
 /*Start Home Page*/
 /* Home Spacing*/
+
+.home-main {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
 .home-feature {
   padding-top: 5em;
   text-align: center;
@@ -301,7 +307,7 @@ footer a:visited, a:active, a:link {
     margin-top: 1em;
 	}
 
-.image1 {
+.image1, .image2, .image3 {
 		position: relative;
 	}
 
@@ -336,16 +342,6 @@ footer a:visited, a:active, a:link {
 	}
 /* End Home News Section*/
 
-/*Home Tour Dates*/
-
-table {
-  padding-bottom: 2em;
-  font-family: Lora, Georgia, serif;
-}
-
-td {
-  padding: .5em;
-}
 
 /* Start Home Newsletter Form*/
 form {
@@ -357,7 +353,7 @@ form {
 .emailform {
   border: 4px solid black;
   background: #fff;
-  width: 50%;
+  width: 100%;
   height: 30px;
   padding: .5em;
   margin-top: 1em;
@@ -368,7 +364,7 @@ form {
 
 .subscribebutton {
   border: 4px solid black;
-  width: 25%;
+  min-width: 25%;
   height: 50px;
   padding: .5em;
   margin-top: 1em;
@@ -388,6 +384,14 @@ form {
 /* End Home Newsletter Form*/
 
 /*Home Media Queries*/
+@media screen and (min-width: 850px) {
+.newsletter {
+  margin: 0 auto;
+  display: block;
+  align-content: center;
+}
+
+
 /*End Home Page*/
 
 /*Start About Page*/
@@ -400,16 +404,19 @@ form {
 
 .juliabio, .nickbio, .jacobbio {
   margin: 0 auto;
-  max-height: 100%;
+  width: 100%;
+  height: auto;
   text-align: center;
   padding: 1em;
 }
 
 /*About Media Queries*/
 @media screen and (min-width: 850px) {
+
   .bios {
-    max-width: 100%;
+    max-width: 80%;
     display: flex;
+    margin: 0 auto;
   }
 
   .bandbio {
@@ -424,11 +431,19 @@ form {
 /*Start News Page*/
 
 .news-entry {
-  padding-top: 3em;
+  padding-bottom: 6em;
+  margin: 0 auto;
 }
 
 .news-body {
   padding-bottom: 2em;
+}
+
+/*News Media Queries*/
+@media screen and (min-width: 850px) {
+.news-entry {
+  max-width: 55%;
+}
 }
 
 /*Start Tour Page*/
