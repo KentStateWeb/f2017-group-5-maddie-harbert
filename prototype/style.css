@@ -4,8 +4,8 @@ svg {
   max-width: 60%;
   display: block;
   margin: auto;
-  padding-top: 7em;
-  padding-bottom: 3em;
+  padding-top: 10em;
+  padding-bottom: 1em;
   stroke: #1C1723;
   stroke-width: 2px;
 }
@@ -21,51 +21,138 @@ img {
   max-width: 100%;
 }
 
-nav a:visited, a:active, a:link {
+/*start nav*/
+/* header */
+
+.header {
+  background-color: #1C1723;
+  position: absolute;
+  width: 100%;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #1C1723;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #1C1723;
   text-decoration: none;
   color: white;
+  text-align: center;
 }
 
-.main-nav {
-  display: -webkit-flex;
-  display: flex;
-  min-width: 100%;
-}
-
-.main-nav li {
-  display: inline-block;
-  list-style-type: none;
-  padding-right: 4em;
-}
-
-.main-nav li:first-child {
-  margin-right: auto;
-}
-
-.main-nav a {
-  display: block;
-}
-
-.sunflowerlogo {
-  width: 60px;
-  height: auto;
-}
-
-nav {
-  text-transform: uppercase;
-  font-weight: 700;
-  padding: 10px;
+.header li a:hover,
+.header .menu-btn:hover {
   background-color: #1C1723;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 99;
-  font-size: 1em;
 }
 
-nav li {
-  padding: .5em;
+.header .logo {
+  display: block;
+  float: left;
+  padding: 10px 20px;
+  max-height: 70px;
+  background-color: #1C1723;
 }
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #1C1723;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: white;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 500px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+
+/* 48em = 768px */
+
+@media screen and (min-width: 850px) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+/*end nav*/
 
 main {
   padding: 6em;
@@ -92,22 +179,31 @@ a {
 
 h1{
   font-family: Montserrat, Helvetica, Arial, sans-serif;
-  font-size: 2.5em;
+  font-size: 1.5em;
 }
 
 h2{
   font-family: Lora, Georgia, serif;
   font-weight: 700;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
-p, li, a, td {
+p, li, a{
   font-family: Lora, Georgia, serif;
-  line-height: 1.5;
+  line-height: 1.5em;
 }
 
 ul, li {
   list-style: none;
+}
+
+@media screen and (min-width: 850px) {
+h1 {
+    font-size: 2.5em;
+  }
+  h2 {
+    font-size: 1.5em;
+}
 }
 
 /* Start Footer*/
@@ -154,9 +250,10 @@ footer a:visited, a:active, a:link {
 
 .latest-news {
   padding-top: 5em;
+  padding-bottom: 5em;
 }
 
-.home-tour {
+.hometour {
   padding-top: 5em;
 }
 
@@ -289,27 +386,38 @@ form {
   color: white;
 }
 /* End Home Newsletter Form*/
+
+/*Home Media Queries*/
 /*End Home Page*/
 
 /*Start About Page*/
 .bandbio {
-  max-width: 60%;
+  max-width: 100%;
   height: auto;
   margin: 0 auto;
-  padding-top: 5em;
+  padding-top: 1em;
 }
 
-.bios {
-  max-width: 100%;
-  display: flex;
-
-}
 .juliabio, .nickbio, .jacobbio {
   margin: 0 auto;
   max-height: 100%;
   text-align: center;
-  line-height: 2.5em;
-  padding: 2em;
+  padding: 1em;
+}
+
+/*About Media Queries*/
+@media screen and (min-width: 850px) {
+  .bios {
+    max-width: 100%;
+    display: flex;
+  }
+
+  .bandbio {
+    max-width: 70%;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 5em;
+  }
 }
 /*End About Page*/
 
@@ -322,6 +430,17 @@ form {
 .news-body {
   padding-bottom: 2em;
 }
+
+/*Start Tour Page*/
+
+.tourdates {
+  padding-bottom: 2em;
+}
+
+h1 {
+  text-align: center;
+}
+
 
 /*Global Button Transition*/
 .button:hover {

@@ -12,25 +12,26 @@
   <body class="home">
 
 
-
-<header role="banner">
   <video autoplay muted loop id="headervideo">
     <source src="images/headervideo2.mp4" type="video/mp4">
   </video>
 
-</header>
-
 <nav role="navigation">
-<ul class="main-nav">
-  <li> <a class="navlink" href="index.html"><img class="sunflowerlogo" src="images/sunflowerlogo.svg" alt="sunflowerlogo"></a></li>
-  <li> <a href="about.html">About</a></li>
-  <li> <a href="news.html">News</a> </li>
-  <li> <a href="#">Music</a> </li>
-  <li> <a href="#">Videos</a> </li>
-  <li> <a href="#">Tour</a> </li>
-  <li> <a href="#">Store</a> </li>
-  <li> <a href="#">Contact</a> </li>
-</ul>
+<header class="header" role="banner">
+  <a href="index.html" class="logo"> <img class="logo" src="images/sunflowerlogo.svg"></a>
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    <li><a href="#">About</a></li>
+    <li><a href="#">News</a></li>
+    <li><a href="#">Music</a></li>
+    <li><a href="#">Videos</a></li>
+    <li><a href="#">Tour</a></li>
+    <li><a href="#">Store</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+
+</header>
 </nav>
 
 <main role="main" class="home-main">
@@ -47,6 +48,7 @@
 <a class="button" href="https://itunes.apple.com/us/album/i-was-a-fool-single/id1296432452?ls=1&app=itunes&at=1l3v3cP&ct=c3y72h">iTunes</a></li>
 </div>
 
+<div class="latest-news">
 <h1> Latest News </h1>
 <div class="container">
   <div class="image1">
@@ -68,51 +70,11 @@
 <div class="newstext"><a href="news.html">Fall European Tour With Wolf Alice</a></div>
 </div>
 </div>
+</div>
 
-
-
-<div class="home-tour">
+<div class=hometour">
 <h1> Upcoming Tour Dates </h1>
-<table style="width:100%">
-  <tr>
-    <th>Date</th>
-    <th>Venue</th>
-    <th>City</th>
-    <th>Tickets</th>
-  </tr>
-  <tr>
-    <td>Nov 8</td>
-    <td>O2 Academy Bristol</td>
-    <td>Bristol, United Kingdom</td>
-    <td>Tickets/RSVP</td>
-  </tr>
-  <tr>
-    <td>Nov 9</td>
-    <td>O2 Apollo</td>
-    <td>Manchester, United Kingdom</td>
-    <td>Tickets/RSVP</td>
-  </tr>
-  <tr>
-    <td>Nov 11</td>
-    <td>Barrowland</td>
-    <td>Glasgow, United Kingdom</td>
-    <td>Tickets/RSVP</td>
-  </tr>
-  <tr>
-    <td>Nov 12</td>
-    <td>Barrowland</td>
-    <td>Glasgow, United Kingdom</td>
-    <td>Tickets/RSVP</td>
-  </tr>
-  <tr>
-    <td>Nov 13</td>
-    <td>O2 Academy Newcastle</td>
-    <td>Newcastle Upton Tyne, United Kingdom</td>
-    <td>Tickets/RSVP</td>
-  </tr>
-</table>
-
-<a class="button" href="tour.html">See More Dates</a>
+<script charset="utf-8" src="https://widget.bandsintown.com/main.min.js"></script><a class="bit-widget-initializer" data-artist-name="Sunflower Bean" data-display-local-dates="false" data-display-past-dates="true" data-auto-style="false" data-text-color="#000000" data-link-color="#1C1723" data-popup-background-color="rgba(0,0,0,0)" data-background-color="rgba(0,0,0,0)" data-display-limit="5" data-link-text-color="#FFFFFF"></a>
 </div>
 
 <div class="newsletter">
@@ -125,7 +87,7 @@
 </div>
     </main>
 
-<footer>
+<footer role="contentinfo">
   <a href="index.html#target">Newsletter+</a>
   <ul class="footer-social">
       <li class="social"> <a href="http://instagram.com/sunflowerbean">Instagram</a> </li>
