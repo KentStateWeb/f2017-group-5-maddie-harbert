@@ -155,7 +155,8 @@ img {
 /*end nav*/
 
 main {
-  padding: 6em;
+  padding: 3em;
+  padding-top: 6em;
   margin: 0 auto;
 }
 
@@ -239,7 +240,6 @@ footer a:visited, a:active, a:link {
 /* Home Spacing*/
 
 .home-main {
-  max-width: 70%;
   margin: 0 auto;
 }
 
@@ -391,6 +391,10 @@ form {
   align-content: center;
 }
 
+.home-main {
+  max-width: 70%;
+}
+
 
 /*End Home Page*/
 
@@ -399,7 +403,7 @@ form {
   max-width: 100%;
   height: auto;
   margin: 0 auto;
-  padding-top: 1em;
+  padding-top: 5em;
 }
 
 .juliabio, .nickbio, .jacobbio {
@@ -425,7 +429,7 @@ form {
     margin: 0 auto;
     padding-top: 5em;
   }
-}
+
 /*End About Page*/
 
 /*Start News Page*/
