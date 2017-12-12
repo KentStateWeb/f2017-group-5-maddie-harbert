@@ -416,7 +416,7 @@ form {
   max-width: 100%;
   height: auto;
   margin: 0 auto;
-  padding-top: 5em;
+  padding-top: 3em;
 }
 
 .juliabio, .nickbio, .jacobbio {
@@ -424,7 +424,7 @@ form {
   width: 100%;
   height: auto;
   text-align: center;
-  padding: 1em;
+  padding-bottom: 3em;
 }
 
 /*About Media Queries*/
@@ -435,6 +435,8 @@ form {
     display: flex;
     margin: 0 auto;
   }
+.juliabio, .nickbio, .jacobbio {
+  margin: .5em;}
 
   .bios h1 {
     font-size: 1.5em;
@@ -445,26 +447,28 @@ form {
     height: auto;
     margin: 0 auto;
     padding-top: 5em;
-  }
+  }}
 
 /*End About Page*/
 
 /*Start News Page*/
 .news-entry {
-  padding-bottom: 6em;
   margin: 0 auto;
+  padding-bottom: 5em;
+  height: 100%;
 }
 
 .news-body {
   padding-bottom: 2em;
 }
 
-/*News Media Queries*/
+/*Start News Page Media Queries*/
 @media screen and (min-width: 850px) {
 .news-entry {
-  max-width: 55%;
+  max-width: 50%;
 }
 }
+
 
 /*Start Tour Page*/
 
@@ -483,6 +487,6 @@ h1 {
   color: white;
 }
 
-.button:visited,.button:active, .button:link {
+.button:visited, .button:active, .button:link {
   color: black;
 }
