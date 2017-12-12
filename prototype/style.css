@@ -533,3 +533,12 @@ form {
   font-family: Lora, serif;
 
 }
+
+/*Project Hub*/
+.projecthub {
+  padding: 2em;
+}
+
+.group {
+  padding-bottom: 2em;
+}
