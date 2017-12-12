@@ -273,6 +273,7 @@ footer a:visited, a:active, a:link {
   width: 100%;
   height: auto;
   max-height: 100%;
+  margin: 0;
 }
 
 /* Home Video iframe*/
@@ -295,12 +296,9 @@ footer a:visited, a:active, a:link {
 /* End Home Video I Frame*/
 
 /* Start Home News Section*/
-.news-container {
-  display: flex;
-}
 
 .container {
-    max-width:100%;
+    width: 100%;
     height: auto;
     position: relative;
 		padding: 0;
@@ -379,6 +377,7 @@ form {
   font-size: 1em;
   transition-duration: 0.2s;
   letter-spacing: 1px;
+  background: none;
 }
 
 .subscribebutton:hover {
@@ -398,7 +397,16 @@ form {
 .home-main {
   max-width: 70%;
 }
+
+.news-container {
+  display: flex;
 }
+.container {
+  width: 33%;
+  margin: .25em;
+}
+}
+
 
 
 /*End Home Page*/
@@ -423,13 +431,17 @@ form {
 @media screen and (min-width: 850px) {
 
   .bios {
-    max-width: 80%;
+    max-width: 70%;
     display: flex;
     margin: 0 auto;
   }
 
+  .bios h1 {
+    font-size: 1.5em;
+  }
+
   .bandbio {
-    max-width: 70%;
+    max-width: 60%;
     height: auto;
     margin: 0 auto;
     padding-top: 5em;
@@ -469,3 +481,8 @@ h1 {
 .button:hover {
   background-color: black;
   color: white;
+}
+
+.button:visited,.button:active, .button:link {
+  color: black;
+}
